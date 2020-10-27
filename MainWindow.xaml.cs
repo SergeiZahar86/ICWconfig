@@ -21,9 +21,44 @@ namespace ICWconfig
         {
             InitializeComponent();
         }
-        private void StartAttestation_Click(object sender, RoutedEventArgs e)
+        private void StartAttestation_Click(object sender, RoutedEventArgs e)  // начала роботы
         {
 
         }
+        private void change_X_plus_left(object sender, RoutedEventArgs e) // изменение +X координаты (Слева)
+        {
+
+        }
+        private void change_X_minus_left(object sender, RoutedEventArgs e) // изменение -X координаты (Слева)
+        {
+
+        }
+        private void change_Y_plus_left(object sender, RoutedEventArgs e) // изменение +Y координаты (Слева)
+        {
+
+        }
+        private void change_Y_minus_left(object sender, RoutedEventArgs e) // изменение -Y координаты (Слева)
+        {
+
+        }
+        private void change_X_plus_right(object sender, RoutedEventArgs e) // изменение +X координаты (Справа)
+        {
+
+        }
+        private void change_X_minus_right(object sender, RoutedEventArgs e) // изменение -X координаты (Справа)
+        {
+
+        }
+        private void change_Y_plus_right(object sender, RoutedEventArgs e) // изменение +Y координаты (Справа)
+        {
+
+        }
+        private void change_Y_minus_right(object sender, RoutedEventArgs e) // изменение -Y координаты (Справа)
+        {
+
+        }
+
+
+
     }
 }
