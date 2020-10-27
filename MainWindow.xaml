@@ -91,7 +91,7 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.4*"/>
+            <ColumnDefinition Width="1.7*"/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -99,7 +99,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="1.4*"/>
+            <ColumnDefinition Width="1.7*"/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -123,9 +123,10 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.4*"/>
         </Grid.RowDefinitions>
         <Border Grid.ColumnSpan="7" Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Background="Gray" Margin="0,30,10,0" >
             <MediaElement x:Name="VideoLeft" />
@@ -145,6 +146,7 @@
                            HorizontalAlignment="Center" />
         </Button>
         <!--////////////////////////// left  /////////////////////////// -->
+        <!--
         <Button x:Name="X_plus_left" Click="change_X_plus_left"  Grid.Column="1" Grid.Row="14" Height="44" Width="60" 
                  Style="{StaticResource coordinates}" HorizontalAlignment="Center" Content="+ X">
         </Button>
@@ -157,105 +159,120 @@
         <Button x:Name="Y_minus_left" Click="change_Y_minus_left"  Grid.Column="3" Grid.Row="15" Height="44" Width="60" 
                  Style="{StaticResource coordinates}" HorizontalAlignment="Center" Content="- Y">
         </Button>
+        -->
         <!--/////////////////////////// right ////////////////////////// -->
+        <!--
         <Button x:Name="X_plus_right" Click="change_X_plus_right"  Grid.Column="9" Grid.Row="14" Height="44" Width="60" 
                  Style="{StaticResource coordinates}" HorizontalAlignment="Center" Content="+ X">
         </Button>
         <Button x:Name="X_minus_right" Click="change_X_minus_right"  Grid.Column="9" Grid.Row="15" Height="44" Width="60" 
                  Style="{StaticResource coordinates}" HorizontalAlignment="Center" Content="- X">
         </Button>
-        <Button x:Name="Y_plus_right" Click="change_Y_plus_right"  Grid.Column="11" Grid.Row="14" Height="44" Width="60" 
-                 Style="{StaticResource coordinates}" HorizontalAlignment="Center" Content="+ Y">
+        -->
+        <Button x:Name="LeftButton" Click="change_Left"  Grid.Column="0" Grid.Row="15" Height="44" Width="60" 
+                 Style="{StaticResource coordinates}" HorizontalAlignment="Center" Content="Left">
         </Button>
-        <Button x:Name="Y_minus_right" Click="change_Y_minus_right"  Grid.Column="11" Grid.Row="15" Height="44" Width="60" 
-                 Style="{StaticResource coordinates}" HorizontalAlignment="Center" Content="- Y">
+        <Button x:Name="RightButton" Click="change_Right"  Grid.Column="8" Grid.Row="15" Height="44" Width="60" 
+                 Style="{StaticResource coordinates}" HorizontalAlignment="Center" Content="Right">
         </Button>
+        
         <!--/////////////////////////////// left  ////////////////////////////-->
-        <Grid Grid.Row="14" Grid.Column="2">
+        <Label Grid.Row="14" Grid.Column="1" Content="X 0" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+        <Label Grid.Row="14" Grid.Column="2" Content="X 1" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+        <Label Grid.Row="14" Grid.Column="3" Content="Y 0" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+        <Label Grid.Row="14" Grid.Column="4" Content="Y 1" FontSize="14" HorizontalContentAlignment="Center"  VerticalContentAlignment="Bottom"/>
+        <Label Grid.Row="14" Grid.Column="9" Content="X 0" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+        <Label Grid.Row="14" Grid.Column="10" Content="X 1" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+        <Label Grid.Row="14" Grid.Column="11" Content="Y 0" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+        <Label Grid.Row="14" Grid.Column="12" Content="Y 1" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+
+
+
+
+
+        <Grid Grid.Row="15" Grid.Column="1" Margin="5,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label x:Name="Label_X_plus_left" Grid.Row="0" Height="19" VerticalAlignment="Bottom"
-                   BorderBrush="Gray" Background="#FFE0D8D8"/>
-            <TextBox x:Name="TextBox_X_plus_left" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
+            <Label x:Name="Label_X_0_left" Grid.Row="0" Height="19" BorderBrush="Gray" Background="#FFE0D8D8"/>
+            <TextBox x:Name="TextBox_X_0_left" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
                      BorderBrush="Gray" Background="#FFE0D8D8"/>
         </Grid>
-        <Grid Grid.Row="15" Grid.Column="2">
+        <Grid Grid.Row="15" Grid.Column="2" Margin="5,0" >
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label x:Name="Label_X_minus_left" Grid.Row="0" Height="19" VerticalAlignment="Center"
-                   BorderBrush="Gray" Background="#FFE0D8D8"/>
-            <TextBox x:Name="TextBox_X_minus_left" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
-                     VerticalAlignment="Top" BorderBrush="Gray" Background="#FFE0D8D8"/>
+            <Label x:Name="Label_X_1_left" Grid.Row="0" Height="19" BorderBrush="Gray" Background="#FFE0D8D8"/>
+            <TextBox x:Name="TextBox_X_1_left" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
+                      BorderBrush="Gray" Background="#FFE0D8D8"/>
         </Grid>
         <!--///////////////////////////////// left  /////////////////////////////////////////////////////////-->
-        <Grid Grid.Row="14" Grid.Column="4">
+        <Grid Grid.Row="15" Grid.Column="3" Margin="5,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label x:Name="Label_Y_plus_left" Grid.Row="0" Height="19" VerticalAlignment="Bottom"
+            <Label x:Name="Label_Y_0_left" Grid.Row="0" Height="19" 
                    BorderBrush="Gray" Background="#FFE0D8D8"/>
-            <TextBox x:Name="TextBox_Y_plus_left" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
+            <TextBox x:Name="TextBox_Y_0_left" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
                      BorderBrush="Gray" Background="#FFE0D8D8"/>
         </Grid>
-        <Grid Grid.Row="15" Grid.Column="4">
+        <Grid Grid.Row="15" Grid.Column="4" Margin="5,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label x:Name="Label_Y_minus_left" Grid.Row="0" Height="19" VerticalAlignment="Center"
+            <Label x:Name="Label_Y_1_left" Grid.Row="0" Height="19" 
                    BorderBrush="Gray" Background="#FFE0D8D8"/>
-            <TextBox x:Name="TextBox_Y_minus_left" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
-                     VerticalAlignment="Top" BorderBrush="Gray" Background="#FFE0D8D8"/>
+            <TextBox x:Name="TextBox_Y_1_left" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
+                    BorderBrush="Gray" Background="#FFE0D8D8"/>
         </Grid>
         <!--///////////////////////////////// right   //////////////////////////////////////////////////-->
-        <Grid Grid.Row="14" Grid.Column="10">
+        <Grid Grid.Row="15" Grid.Column="9" Margin="5,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label x:Name="Label_X_plus_right" Grid.Row="0" Height="19" VerticalAlignment="Bottom"
+            <Label x:Name="Label_X_0_right" Grid.Row="0" Height="19" 
                    BorderBrush="Gray" Background="#FFE0D8D8"/>
-            <TextBox x:Name="TextBox_X_plus_right" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
+            <TextBox x:Name="TextBox_X_0_right" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
                      BorderBrush="Gray" Background="#FFE0D8D8"/>
         </Grid>
-        <Grid Grid.Row="15" Grid.Column="10">
+        <Grid Grid.Row="15" Grid.Column="10" Margin="5,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label x:Name="Label_X_minus_right" Grid.Row="0" Height="19" VerticalAlignment="Center"
+            <Label x:Name="Label_X_1_right" Grid.Row="0" Height="19" 
                    BorderBrush="Gray" Background="#FFE0D8D8"/>
-            <TextBox x:Name="TextBox_X_minus_right" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
-                     VerticalAlignment="Top" BorderBrush="Gray" Background="#FFE0D8D8"/>
+            <TextBox x:Name="TextBox_X_1_right" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
+                     BorderBrush="Gray" Background="#FFE0D8D8"/>
         </Grid>
         <!--////////////////////////////////////  right   //////////////////////////////////////////////////////-->
-        <Grid Grid.Row="14" Grid.Column="12">
+        <Grid Grid.Row="15" Grid.Column="11" Margin="5,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label x:Name="Label_Y_plus_right" Grid.Row="0" Height="19" VerticalAlignment="Bottom"
+            <Label x:Name="Label_Y_0_right" Grid.Row="0" Height="19" 
                    BorderBrush="Gray" Background="#FFE0D8D8"/>
-            <TextBox x:Name="TextBox_Y_plus_right" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
+            <TextBox x:Name="TextBox_Y_0_right" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
                      BorderBrush="Gray" Background="#FFE0D8D8"/>
         </Grid>
-        <Grid Grid.Row="15" Grid.Column="12">
+        <Grid Grid.Row="15" Grid.Column="12" Margin="5,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label x:Name="Label_Y_minus_right" Grid.Row="0" Height="19" VerticalAlignment="Center"
+            <Label x:Name="Label_Y_1_right" Grid.Row="0" Height="19" 
                    BorderBrush="Gray" Background="#FFE0D8D8"/>
-            <TextBox x:Name="TextBox_Y_minus_right" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
-                     VerticalAlignment="Top" BorderBrush="Gray" Background="#FFE0D8D8"/>
+            <TextBox x:Name="TextBox_Y_1_right" Grid.Row="1" Height="22" FontSize="16" MaxLength="10"
+                     BorderBrush="Gray" Background="#FFE0D8D8"/>
         </Grid>
         <!--///////////////////////// Определение левого номера  //////////////////////////////////////////////////////////-->
-        <StackPanel Grid.Row="14" Grid.Column="5" Grid.ColumnSpan="3" Orientation="Horizontal"
+        <StackPanel Grid.Row="15" Grid.Column="5" Grid.ColumnSpan="3" Orientation="Horizontal"
                     FlowDirection="LeftToRight" Margin="50,0,0,0" >
             <Label x:Name="numberLeft" Height="40" Width="200" Background="#FFE0D8D8" FontSize="16"/>
             <CheckBox x:Name="checkNumberLeft" VerticalAlignment="Center" Margin="10,0,0,0" >
@@ -265,7 +282,7 @@
             </CheckBox>
         </StackPanel>
         <!--///////////////////////// Определение правого номера  //////////////////////////////////////////////////////////-->
-        <StackPanel Grid.Row="14" Grid.Column="13" Grid.ColumnSpan="3" Orientation="Horizontal"
+        <StackPanel Grid.Row="15" Grid.Column="13" Grid.ColumnSpan="3" Orientation="Horizontal"
                     FlowDirection="LeftToRight" Margin="50,0,0,0" >
             <Label x:Name="numberRight" Height="40" Width="200" Background="#FFE0D8D8" FontSize="16"/>
             <CheckBox x:Name="checkNumberRight" VerticalAlignment="Center" Margin="10,0,0,0" >
