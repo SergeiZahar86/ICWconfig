@@ -129,7 +129,7 @@
             <RowDefinition Height="0.4*"/>
         </Grid.RowDefinitions>
         <Border Grid.ColumnSpan="7" Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Background="Gray" Margin="0,30,10,0" >
-            <MediaElement x:Name="VideoLeft" />
+            <MediaElement x:Name="VideoLeft" LoadedBehavior="Manual" Source="rtsp://10.90.90.5/test.mp4"/>
         </Border>
         <Border Grid.ColumnSpan="7" Grid.Column="9" Grid.Row="0" Grid.RowSpan="7" Background="Gray" Margin="0,30,10,0" >
             <MediaElement x:Name="VideoRight" />

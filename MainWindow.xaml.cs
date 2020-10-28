@@ -20,6 +20,8 @@ namespace ICWconfig
         public MainWindow()
         {
             InitializeComponent();
+            VideoLeft.Source = new Uri("rtsp://10.90.90.5/test.mp4");
+            VideoLeft.Play();
         }
         private void StartAttestation_Click(object sender, RoutedEventArgs e)  // начала роботы
         {
