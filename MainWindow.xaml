@@ -129,7 +129,7 @@
             <RowDefinition Height="0.4*"/>
         </Grid.RowDefinitions>
         <Border Grid.ColumnSpan="7" Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Background="Gray" Margin="0,30,10,0" >
-            <MediaElement x:Name="VideoLeft" LoadedBehavior="Manual" Source="rtsp://10.90.90.5/test.mp4"/>
+            <MediaElement x:Name="VideoLeft" LoadedBehavior="Manual" UnloadedBehavior="Manual"/>
         </Border>
         <Border Grid.ColumnSpan="7" Grid.Column="9" Grid.Row="0" Grid.RowSpan="7" Background="Gray" Margin="0,30,10,0" >
             <MediaElement x:Name="VideoRight" />
@@ -172,8 +172,34 @@
         <Button x:Name="LeftButton" Click="change_Left"  Grid.Column="0" Grid.Row="15" Height="44" Width="60" 
                  Style="{StaticResource coordinates}" HorizontalAlignment="Center" Content="Left">
         </Button>
+        <Button x:Name="LeftConnect" Click="Connect_Left"  Grid.Column="0" Grid.Row="16" Height="44" Width="60" 
+                 Style="{StaticResource coordinates}" HorizontalAlignment="Center" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Left" FontSize="14" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Row="1" Text="Connect" FontSize="14"/>
+            </Grid>
+        </Button>
+        <TextBox x:Name="LeftMessages" Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="16"
+               Background="LightGray" Margin="5,0,75,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" />
+        <TextBox x:Name="RightMessages" Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="16"
+               Background="LightGray" Margin="5,0,75,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" />
         <Button x:Name="RightButton" Click="change_Right"  Grid.Column="8" Grid.Row="15" Height="44" Width="60" 
                  Style="{StaticResource coordinates}" HorizontalAlignment="Center" Content="Right">
+        </Button>
+        <Button x:Name="RightConnect" Click="Connect_Right"  Grid.Column="8" Grid.Row="16" Height="44" Width="60" 
+                 Style="{StaticResource coordinates}" HorizontalAlignment="Center" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Right" FontSize="14" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Row="1" Text="Connect" FontSize="14"/>
+            </Grid>
         </Button>
         
         <!--/////////////////////////////// left  ////////////////////////////-->
@@ -291,7 +317,9 @@
                 </CheckBox.LayoutTransform>
             </CheckBox>
         </StackPanel>
-
+        <!--
+        <MediaElement x:Name="Creux_De_Van___45150_mp4" Grid.ColumnSpan="16" Margin="84,50,-98,-360" Grid.Row="4" Grid.RowSpan="14" Stretch="Fill"/>
+        -->
 
 
 
